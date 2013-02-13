@@ -5,13 +5,6 @@
  * Time: 14:09
  * To change this template use File | Settings | File Templates.
  */
-/**
- * Created with JetBrains WebStorm.
- * User: kastalski
- * Date: 12/02/13
- * Time: 17:48
- * To change this template use File | Settings | File Templates.
- */
 (function( $ ) {
     var Operations = {
         divide : ' /',
