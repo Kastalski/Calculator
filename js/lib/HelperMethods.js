@@ -5,10 +5,8 @@
  * Time: 14:12
  * To change this template use File | Settings | File Templates.
  */
-function HelperMethods() {
-    return {
-        isNumber : function (string) {
-            return !isNaN(parseFloat(string)) && isFinite(string)
-        }
+define({
+    isNumber : function (string) {
+        return !isNaN(parseFloat(string)) && isFinite(string)
     }
-}
+})
