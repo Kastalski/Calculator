@@ -1,0 +1,30 @@
+.calculator { width:170px; height:200px; background-color:#abc; margin:0 auto; }
+.calc_input { float:left; margin:10px; width:150px; height:30px; background-color:#fff; }
+.on_off_panel { float:left; width:160px; text-align:right; margin-right:10px; padding-bottom:10px; }
+.numbers_panel { float:left; padding-left:10px; }
+.operation_panel { float:right; padding-right:10px; }
+.number_buttons { width:25px; }
+.onOff_buttons { width:40px; }
+.math_operations { width: 30px; }
+.equal { width: 60px; }
+.spinner_panel {
+    position:absolute;
+    width:170px;
+    height:200px;
+    margin:0 auto;
+    index:99999;
+    background-color:#AAA;
+    display:none;
+    text-align:center;
+    vertical-align:middle;
+    line-height:200px;
+    font-size:24pt;
+    font-weight:bold;
+}
+.opacity50 {
+    -webkit-opacity:0.5;
+    -moz-opacity:0.5;
+    opacity:0.5;
+    filter:alpha(opacity=50);
+}
+.historyList { width:200px; margin:0 auto; }
