@@ -128,9 +128,13 @@
             $('#off').unbind('click.calculator')
             $('.number_buttons').unbind('click.calculator')
             $('.math_operations').unbind('click.calculator')
+            methods.clearHistory()
         },
         clearVariables : function() {
             jQuery.each(Params, function(index) { Params[index] = '' })
+        },
+        clearHistory: function() {
+            $('#historyList').children().detach()
         },
         calculate : function (nextOperation) {
             methods.showSpinner()
@@ -189,8 +193,14 @@
             $('.spinner_panel').fadeOut('slow')
         },
         addHisoryItem: function(result) {
-            var historyItem = Params.x1 + ' ' + Operations[Params.operation] + ' ' + Params.x2 + " = " + result
-            $('<li/>', {text: historyItem}).appendTo('#historyList')
+            var historyItem = _.template('<%=x1%> <%=op%> <%=x2%> = <%=result%>')
+            var historyValues = {
+                x1:Params.x1,
+                op:Operations[Params.operation],
+                x2:Params.x2,
+                result:result
+            }
+            $('<li/>', {text: historyItem(historyValues)}).appendTo('#historyList')
         },
         isNumber : function (string) { return true }
     }
