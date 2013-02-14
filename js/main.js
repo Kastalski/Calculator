@@ -1,21 +1,19 @@
 /**
  * Created with JetBrains WebStorm.
  * User: kastalski
- * Date: 13/02/13
- * Time: 14:28
+ * Date: 14/02/13
+ * Time: 10:30
  * To change this template use File | Settings | File Templates.
  */
 requirejs.config({
     baseUrl: 'js/lib',
     paths: {
-        app: '../app'
+        app: '../app',
+        'jquery': 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min',
+        'underscore': 'http://underscorejs.org/underscore'
     }
 })
-var creationMethods = {}
-var helperMethods = {}
-// Start the main app logic.
-requirejs(['CreationMethods', 'HelperMethods', 'Calculator', 'app/sub'],
-    function (CreationMethods, HelperMethods, Calculator, sub) {
-        creationMethods = CreationMethods
-        helperMethods = HelperMethods
+
+requirejs(['jquery', 'underscore', 'app/loadCalcComponents'],
+    function ($, _, loadCalcComponents) {
     })
