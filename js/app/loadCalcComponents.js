@@ -5,8 +5,8 @@
  * Time: 10:31
  * To change this template use File | Settings | File Templates.
  */
-requirejs(['CreationMethods', 'HelperMethods', 'Calculator'],
-    function (CreationMethods, HelperMethods, Calculator) {
+requirejs(['jquery', 'CreationMethods', 'HelperMethods', 'Calculator'],
+    function ($, CreationMethods, HelperMethods, Calculator) {
         $(document).ready(function() {
             var options = {
                 lengthField: 9,
