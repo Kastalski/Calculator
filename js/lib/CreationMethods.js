@@ -5,7 +5,8 @@
  * Time: 17:46
  * To change this template use File | Settings | File Templates.
  */
-define({
+define(['jquery'], function($) {
+return {
     createInput : function($this) {
         var $input = $('<div/>', {'class': 'calc_input'})
         $this.append($input)
@@ -48,5 +49,6 @@ define({
         var $historyPanel = $('<div/>', {'class': 'historyList'})
         $('<ul/>', {id: 'historyList'}).appendTo($historyPanel)
         $this.after($historyPanel)
+    }
     }
 })
